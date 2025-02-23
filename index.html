@@ -11,6 +11,12 @@
 	<link rel="stylesheet" href="css/magnific-popup.css">
 	<link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
 	<link rel="stylesheet" href="css/style.css">
+	<style>
+		/* Smooth scrolling */
+		html {
+			scroll-behavior: smooth;
+		}
+	</style>
 </head>
 
 <body>
@@ -25,11 +31,11 @@
 					</button>
 					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 						<ul class="nav navbar-nav menu_nav justify-content-end">
-							<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-							<li class="nav-item"><a class="nav-link" href="#id1">About</a></li>
-							<li class="nav-item"><a class="nav-link" href="services.html">Skills</a></li>
-							<li class="nav-item"><a class="nav-link" href="portfolio.html">Projects</a></li>
-							<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+							<li class="nav-item active"><a class="nav-link" href="#home">Home</a></li> <!-- Updated -->
+							<li class="nav-item"><a class="nav-link" href="#about">About</a></li> <!-- Updated -->
+							<li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li> <!-- Updated -->
+							<li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li> <!-- Updated -->
+							<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li> <!-- Updated -->
 						</ul>
 					</div>
 				</div>
@@ -37,7 +43,8 @@
 		</div>
 	</header>
 
-	<section class="home_banner_area" id="id1">
+	<!-- Home Section -->
+	<section class="home_banner_area" id="home"> <!-- Added id="home" -->
 		<div class="banner_inner">
 			<div class="container">
 				<div class="row">
@@ -63,7 +70,8 @@
 		</div>
 	</section>
 
-	<section class="about_area section_gap">
+	<!-- About Section -->
+	<section class="about_area section_gap" id="about"> <!-- Added id="about" -->
 		<div class="container">
 			<div class="row justify-content-start align-items-center">
 				<div class="col-lg-5">
@@ -82,7 +90,8 @@
 		</div>
 	</section>
 
-	<section class="features_area">
+	<!-- Skills Section -->
+	<section class="features_area" id="skills"> <!-- Added id="skills" -->
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-lg-8 text-center">
@@ -125,7 +134,8 @@
 		</div>
 	</section>
 
-	<section class="portfolio_area" id="portfolio">
+	<!-- Projects Section -->
+	<section class="portfolio_area" id="projects"> <!-- Added id="projects" -->
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
@@ -192,17 +202,8 @@
 		</div>
 	</section>
 
-	<section class="banner_area">
-		<div class="banner_inner d-flex align-items-center">
-			<div class="container">
-				<div class="banner_content text-center">
-					<h2>Contact Me</h2>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="contact_area section_gap">
+	<!-- Contact Section -->
+	<section class="contact_area section_gap" id="contact"> <!-- Added id="contact" -->
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-3">

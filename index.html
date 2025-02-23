@@ -11,17 +11,10 @@
 	<link rel="stylesheet" href="css/magnific-popup.css">
 	<link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
 	<link rel="stylesheet" href="css/style.css">
-	<style>
-		/* Smooth scrolling */
-		html {
-			scroll-behavior: smooth;
-		}
-	</style>
 </head>
 
 <body>
-	<!-- Home Section -->
-	<header class="header_area" id="home">
+	<header class="header_area">
 		<div class="main_menu">
 			<nav class="navbar navbar-expand-lg navbar-light">
 				<div class="container">
@@ -32,15 +25,19 @@
 					</button>
 					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 						<ul class="nav navbar-nav menu_nav justify-content-end">
-							<li class="nav-item active"><a class="nav-link" href="#home">Home</a></li>
-							<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-							<li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-							<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+							<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+							<li class="nav-item"><a class="nav-link" href="#id1">About</a></li>
+							<li class="nav-item"><a class="nav-link" href="services.html">Skills</a></li>
+							<li class="nav-item"><a class="nav-link" href="portfolio.html">Projects</a></li>
+							<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
 						</ul>
 					</div>
 				</div>
 			</nav>
 		</div>
+	</header>
+
+	<section class="home_banner_area" id="id1">
 		<div class="banner_inner">
 			<div class="container">
 				<div class="row">
@@ -64,10 +61,9 @@
 				</div>
 			</div>
 		</div>
-	</header>
+	</section>
 
-	<!-- About Section -->
-	<section class="about_area section_gap" id="about">
+	<section class="about_area section_gap">
 		<div class="container">
 			<div class="row justify-content-start align-items-center">
 				<div class="col-lg-5">
@@ -86,8 +82,50 @@
 		</div>
 	</section>
 
-	<!-- Projects Section -->
-	<section class="portfolio_area" id="projects">
+	<section class="features_area">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-8 text-center">
+					<div class="main_title">
+						<h2>Professional Skills</h2>
+						<p>Some of the skills that I have refined over the course of my undergrad degree.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row feature_inner">
+				<div class="col-lg-3 col-md-6">
+					<div class="feature_item">
+						<img src="img/services/s1.png" alt="">
+						<h4>App Development</h4>
+						<p>I have built intuitive and beautiful cross-platform apps with Flutter.</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="feature_item">
+						<img src="img/services/s2.png" alt="">
+						<h4>UI/UX Design</h4>
+						<p>Designed, prototyped, and wireframed apps and websites using Adobe XD.</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="feature_item">
+						<img src="img/services/s3.png" alt="">
+						<h4>Machine Learning</h4>
+						<p>Worked on projects using tools like SciKit, TensorFlow, and PyTorch.</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="feature_item">
+						<img src="img/services/s4.png" alt="">
+						<h4>Competitive Programming</h4>
+						<p>Proficient in C, C++, Java, Python, and Dart.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="portfolio_area" id="portfolio">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
@@ -154,8 +192,17 @@
 		</div>
 	</section>
 
-	<!-- Contact Section -->
-	<section class="contact_area section_gap" id="contact">
+	<section class="banner_area">
+		<div class="banner_inner d-flex align-items-center">
+			<div class="container">
+				<div class="banner_content text-center">
+					<h2>Contact Me</h2>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="contact_area section_gap">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-3">
@@ -203,6 +250,23 @@
 					</form>
 				</div>
 			</div>
+			<br>
+			<center>
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-lg-8 text-center">
+							<h3>Visit me on my social profiles</h3>
+						</div>
+					</div>
+					<div class="button-group-area mt-40">
+						<a href="https://www.linkedin.com/in/vineet-kishore-a73149179/" target="_blank" class="genric-btn primary circle">LinkedIn</a>
+						<a href="https://twitter.com/VineetKishore7" target="_blank" class="genric-btn success circle">Twitter</a>
+						<a href="https://www.facebook.com/vineet.kishore.127" target="_blank" class="genric-btn info circle">Facebook</a>
+						<a href="https://angel.co/vineet-kishore" target="_blank" class="genric-btn warning circle">AngelList</a>
+						<a href="https://classy-mozzarella-88b.notion.site/Custom-Rom-Learnings-1a30d2e1e7698001a3e2f6b6a0ed9655?pvs=4" target="_blank" class="genric-btn danger circle">Notion</a>
+					</div>
+				</div>
+			</center>
 		</div>
 	</section>
 

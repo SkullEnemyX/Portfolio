@@ -16,6 +16,14 @@
 		html {
 			scroll-behavior: smooth;
 		}
+		/* Iframe styling */
+		.iframe-container {
+			margin: 40px 0;
+			padding: 20px;
+			background: #f9f9f9;
+			border-radius: 10px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		}
 	</style>
 </head>
 
@@ -31,11 +39,12 @@
 					</button>
 					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 						<ul class="nav navbar-nav menu_nav justify-content-end">
-							<li class="nav-item active"><a class="nav-link" href="#home">Home</a></li> <!-- Updated -->
-							<li class="nav-item"><a class="nav-link" href="#about">About</a></li> <!-- Updated -->
-							<li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li> <!-- Updated -->
-							<li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li> <!-- Updated -->
-							<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li> <!-- Updated -->
+							<li class="nav-item active"><a class="nav-link" href="#home">Home</a></li>
+							<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+							<li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+							<li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+							<li class="nav-item"><a class="nav-link" href="#iframe">Articles</a></li> <!-- New link for iframe section -->
+							<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
 						</ul>
 					</div>
 				</div>
@@ -44,7 +53,7 @@
 	</header>
 
 	<!-- Home Section -->
-	<section class="home_banner_area" id="home"> <!-- Added id="home" -->
+	<section class="home_banner_area" id="home">
 		<div class="banner_inner">
 			<div class="container">
 				<div class="row">
@@ -71,7 +80,7 @@
 	</section>
 
 	<!-- About Section -->
-	<section class="about_area section_gap" id="about"> <!-- Added id="about" -->
+	<section class="about_area section_gap" id="about">
 		<div class="container">
 			<div class="row justify-content-start align-items-center">
 				<div class="col-lg-5">
@@ -91,7 +100,7 @@
 	</section>
 
 	<!-- Skills Section -->
-	<section class="features_area" id="skills"> <!-- Added id="skills" -->
+	<section class="features_area" id="skills">
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-lg-8 text-center">
@@ -135,7 +144,7 @@
 	</section>
 
 	<!-- Projects Section -->
-	<section class="portfolio_area" id="projects"> <!-- Added id="projects" -->
+	<section class="portfolio_area" id="projects">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
@@ -202,8 +211,27 @@
 		</div>
 	</section>
 
+	<!-- Iframe Section -->
+	<section class="iframe-container" id="iframe">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="main_title text-left">
+						<h2>Articles by Vineet Kishore</h2>
+						<p>Explore my articles and writings on various topics.</p>
+					</div>
+				</div>
+			</div>
+			<iframe 
+				src="https://classy-mozzarella-88b.notion.site/Articles-by-Vineet-Kishore-1a30d2e1e7698001a3e2f6b6a0ed9655?pvs=74" 
+				style="width: 100%; height: 500px; border: 2px solid #ccc; border-radius: 10px; padding: none;"
+				allow="fullscreen"
+			></iframe>
+		</div>
+	</section>
+
 	<!-- Contact Section -->
-	<section class="contact_area section_gap" id="contact"> <!-- Added id="contact" -->
+	<section class="contact_area section_gap" id="contact">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-3">
@@ -252,11 +280,7 @@
 				</div>
 			</div>
 			<br>
-<iframe 
-    src="https://classy-mozzarella-88b.notion.site/Articles-by-Vineet-Kishore-1a30d2e1e7698001a3e2f6b6a0ed9655?pvs=74" 
-    style="width: 100%; height: 500px; border: 2px solid #ccc; border-radius: 10px; padding: none;"
-    allow="fullscreen"
-></iframe>			<center>
+			<center>
 				<div class="container">
 					<div class="row justify-content-center">
 						<div class="col-lg-8 text-center">

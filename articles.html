@@ -28,6 +28,19 @@
 		.main_title {
 			margin-bottom: 10px; /* Adjust this value as needed */
 		}
+
+		/* Hide the heading and paragraph initially */
+		.main_title {
+			opacity: 0;
+			transform: translateY(20px); /* Start slightly below */
+			transition: opacity 1s ease, transform 1s ease;
+		}
+
+		/* Animation to fade in and slide up */
+		.main_title.visible {
+			opacity: 1;
+			transform: translateY(0);
+		}
 	</style>
 </head>
 
@@ -49,5 +62,13 @@
 			></iframe>
 		</div>
 	</section>
+
+	<script>
+		// Add a delay of 3 seconds before showing the heading and paragraph
+		setTimeout(() => {
+			const mainTitle = document.querySelector('.main_title');
+			mainTitle.classList.add('visible'); // Add the 'visible' class to trigger the animation
+		}, 3000); // 3000ms = 3 seconds
+	</script>
 </body>
 </html>

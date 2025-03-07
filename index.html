@@ -16,13 +16,47 @@
 		html {
 			scroll-behavior: smooth;
 		}
-		/* Iframe styling */
-		.iframe-container {
-			margin: 40px 0;
-			padding: 20px;
-			background: #f9f9f9;
-			border-radius: 10px;
-			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+		/* Hamburger menu fix */
+		.navbar-toggler {
+			border: none;
+			background: transparent !important;
+		}
+
+		.navbar-toggler .icon-bar {
+			display: block;
+			width: 22px;
+			height: 2px;
+			background: #ffffff;
+			margin: 4px 0;
+			transition: all 0.3s ease;
+		}
+
+		.navbar-toggler.collapsed .icon-bar {
+			background: #ffffff;
+		}
+
+		/* Ensure the mobile menu is visible */
+		.navbar-collapse {
+			background: #191919; /* Match the header background */
+			padding: 10px;
+		}
+
+		/* Show the image in mobile version */
+		.home_right_img {
+			display: block !important; /* Ensure the image is visible */
+			margin-top: 20px; /* Add some spacing */
+		}
+
+		/* Animation for the image */
+		@keyframes shrinkGrow {
+			0% { transform: scale(1); }
+			50% { transform: scale(0.95); }
+			100% { transform: scale(1); }
+		}
+
+		.home_right_img img {
+			animation: shrinkGrow 3s infinite; /* Apply the animation */
 		}
 	</style>
 </head>
@@ -32,7 +66,7 @@
 		<div class="main_menu">
 			<nav class="navbar navbar-expand-lg navbar-light">
 				<div class="container">
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
@@ -43,7 +77,7 @@
 							<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
 							<li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
 							<li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-							<li class="nav-item"><a class="nav-link" href="articles.html">Articles</a></li> <!-- New link for iframe section -->
+							<li class="nav-item"><a class="nav-link" href="articles.html">Articles</a></li>
 							<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
 						</ul>
 					</div>

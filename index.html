@@ -36,26 +36,35 @@
 			background: #ffffff;
 		}
 
-		/* Ensure the mobile menu is visible */
+		/* Ensure the mobile menu is visible and remove the black strip */
 		.navbar-collapse {
-			background: #191919; /* Match the header background */
-			padding: 10px;
+			background: transparent; /* Remove the black background */
+			padding: 0; /* Remove padding */
 		}
 
-		/* Show the image in mobile version */
-		.home_right_img {
-			display: block !important; /* Ensure the image is visible */
+		/* Show the images in mobile version */
+		.home_right_img,
+		.about_img {
+			display: block !important; /* Ensure the images are visible */
 			margin-top: 20px; /* Add some spacing */
 		}
 
-		/* Animation for the image */
+		/* Reduce the size of images by 20% */
+		.home_right_img img,
+		.about_img img {
+			width: 80%; /* Reduce size by 20% */
+			height: auto; /* Maintain aspect ratio */
+		}
+
+		/* Animation for the images */
 		@keyframes shrinkGrow {
 			0% { transform: scale(1); }
 			50% { transform: scale(0.95); }
 			100% { transform: scale(1); }
 		}
 
-		.home_right_img img {
+		.home_right_img img,
+		.about_img img {
 			animation: shrinkGrow 3s infinite; /* Apply the animation */
 		}
 	</style>

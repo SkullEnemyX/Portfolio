@@ -7,22 +7,15 @@
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/style.css">
 	<style>
-		var frame = document.getElementById("Iframe");
-            
-            // Adjusting the iframe height onload event
-            frame.onload = function() {
-                // set the height of the iframe as 
-                // the height of the iframe content
-                frame.style.height = frame.contentWindow.document.body.scrollHeight + 'px';
-
-                // set the width of the iframe as the 
-                // width of the iframe content
-                frame.style.width  = frame.contentWindow.document.body.scrollWidth + 'px';
-            }
 		/* Only change the background color */
 		body {
 			background-color: #191919; /* Dark background color */
 			background-image: none;
+			overflow: hidden; /* Hide scrollbar */
+			margin: 0; /* Remove default margin */
+			padding: 0; /* Remove default padding */
+			width: 100vw; /* Full viewport width */
+			height: 100vh; /* Full viewport height */
 		}
 
 		/* Change the title color to white */
@@ -34,6 +27,9 @@
 		/* Remove white border around iframe */
 		iframe {
 			border: none; /* Remove border */
+			width: 100vw; /* Full viewport width */
+			height: 100vh; /* Full viewport height */
+			overflow: hidden; /* Hide scrollbar */
 		}
 
 		/* Reduce the gap between the text and the iframe */
@@ -53,12 +49,21 @@
 			opacity: 1;
 			transform: translateY(0);
 		}
+
+		/* Ensure the iframe container takes full width and height */
+		.iframe-container {
+			width: 100vw; /* Full viewport width */
+			height: 100vh; /* Full viewport height */
+			margin: 0; /* Remove default margin */
+			padding: 0; /* Remove default padding */
+			overflow: hidden; /* Hide scrollbar */
+		}
 	</style>
 </head>
 
 <body>
 	<section class="iframe-container">
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="main_title text-left">
@@ -69,8 +74,8 @@
 			</div>
 			<iframe 
 				src="https://v2-embednotion.com/1a30d2e1e7698001a3e2f6b6a0ed9655" 
-				style="width: 100%;"
 				id="Iframe"
+				scrolling="no"
 			></iframe>
 		</div>
 	</section>

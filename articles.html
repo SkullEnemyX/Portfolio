@@ -18,13 +18,7 @@
 			height: 100vh; /* Full viewport height */
 		}
 
-		/* Change the title color to white */
-		.main_title h2,
-		.main_title p {
-			color: #ffffff; /* White text color */
-		}
-
-		/* Remove white border around iframe */
+			/* Remove white border around iframe */
 		iframe {
 			border: none; /* Remove border */
 			width: 100vw; /* Full viewport width */
@@ -32,25 +26,7 @@
 			overflow: hidden; /* Hide scrollbar */
 		}
 
-		/* Reduce the gap between the text and the iframe */
-		.main_title {
-			margin-bottom: 10px; /* Adjust this value as needed */
-		}
-
-		/* Hide the heading and paragraph initially */
-		.main_title {
-			opacity: 0;
-			transform: translateY(20px); /* Start slightly below */
-			transition: opacity 1s ease, transform 1s ease;
-		}
-
-		/* Animation to fade in and slide up */
-		.main_title.visible {
-			opacity: 1;
-			transform: translateY(0);
-		}
-
-		/* Ensure the iframe container takes full width and height */
+			/* Ensure the iframe container takes full width and height */
 		.iframe-container {
 			width: 100vw; /* Full viewport width */
 			height: 100vh; /* Full viewport height */
@@ -63,29 +39,11 @@
 
 <body>
 	<section class="iframe-container">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="main_title text-left">
-						<h2>Articles by Vineet Kishore</h2>
-						<p>Explore my articles and writings on various topics.</p>
-					</div>
-				</div>
-			</div>
-			<iframe 
-				src="https://v2-embednotion.com/1a30d2e1e7698001a3e2f6b6a0ed9655" 
-				id="Iframe"
-				scrolling="no"
-			></iframe>
-		</div>
+		<iframe 
+			src="https://v2-embednotion.com/1a30d2e1e7698001a3e2f6b6a0ed9655" 
+			id="Iframe"
+			scrolling="no"
+		></iframe>
 	</section>
-
-	<script>
-		// Add a delay of 3 seconds before showing the heading and paragraph
-		setTimeout(() => {
-			const mainTitle = document.querySelector('.main_title');
-			mainTitle.classList.add('visible'); // Add the 'visible' class to trigger the animation
-		}, 3000); // 3000ms = 3 seconds
-	</script>
 </body>
 </html>

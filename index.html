@@ -1,358 +1,408 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Vineet's Portfolio</title>
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="vendors/linericon/style.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/magnific-popup.css">
-	<link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
-	<link rel="stylesheet" href="css/style.css">
-	<style>
-		/* Smooth scrolling */
-		html {
-			scroll-behavior: smooth;
-		}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Vineet's Portfolio</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="vendors/linericon/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
 
-		/* Hamburger menu fix */
-		.navbar-toggler {
-			border: none;
-			background: transparent !important;
-		}
+        /* Hamburger menu fix */
+        .navbar-toggler {
+            border: none;
+            background: transparent !important;
+        }
 
-		.navbar-toggler .icon-bar {
-			display: block;
-			width: 22px;
-			height: 2px;
-			background: #ffffff;
-			margin: 4px 0;
-			transition: all 0.3s ease;
-		}
+        .navbar-toggler .icon-bar {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: #ffffff;
+            margin: 4px 0;
+            transition: all 0.3s ease;
+        }
 
-		.navbar-toggler.collapsed .icon-bar {
-			background: #ffffff;
-		}
+        .navbar-toggler.collapsed .icon-bar {
+            background: #ffffff;
+        }
 
-		/* Ensure the mobile menu is visible and remove the black strip */
-		.navbar-collapse {
-			background: transparent; /* Remove the black background */
-			padding: 0; /* Remove padding */
-		}
+        /* Ensure the mobile menu is visible and remove the black strip */
+        .navbar-collapse {
+            background: transparent; /* Remove the black background */
+            padding: 0; /* Remove padding */
+        }
 
-		/* Show the images in mobile version */
-		.home_right_img,
-		.about_img {
-			display: block !important; /* Ensure the images are visible */
-			margin-top: 10px; /* Reduce space between text and image */
-		}
+        /* Show the images in mobile version */
+        .home_right_img,
+        .about_img {
+            display: block !important; /* Ensure the images are visible */
+            margin-top: 10px; /* Reduce space between text and image */
+        }
 
-		/* Increase the size of images by 15% */
-		.home_right_img img,
-		.about_img img {
-			width: 115%; /* Increase size by 15% */
-			height: auto; /* Maintain aspect ratio */
-		}
+        /* Increase the size of images by 15% */
+        .home_right_img img,
+        .about_img img {
+            width: 100%; /* Reset to 100% to prevent overflow */
+            height: auto; /* Maintain aspect ratio */
+            max-width: 100%; /* Ensure it doesn't exceed container width */
+        }
 
-		/* Animation for the images */
-		@keyframes shrinkGrow {
-			0% { transform: scale(1); }
-			50% { transform: scale(0.95); }
-			100% { transform: scale(1); }
-		}
+        /* Animation for the images */
+        @keyframes shrinkGrow {
+            0% { transform: scale(1); }
+            50% { transform: scale(0.95); }
+            100% { transform: scale(1); }
+        }
 
-		.home_right_img img,
-		.about_img img {
-			animation: shrinkGrow 3s infinite; /* Apply the animation */
-		}
+        .home_right_img img,
+        .about_img img {
+            animation: shrinkGrow 3s infinite; /* Apply the animation */
+        }
 
-		/* Projects section: Use the same block as Skills section */
-		.projects_area .feature_item {
-			text-align: center;
-			margin-bottom: 30px;
-			width: 100%; /* Ensure all boxes have the same width */
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: space-between;
-			height: 350px; /* Set a larger fixed height for consistency */
-			overflow: hidden; /* Prevent text overflow */
-			padding: 20px; /* Add padding for better spacing */
-		}
+        /* Projects section: Use the same block as Skills section */
+        .projects_area .feature_item {
+            text-align: center;
+            margin-bottom: 30px;
+            width: 100%; /* Ensure all boxes have the same width */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: 350px; /* Set a larger fixed height for consistency */
+            overflow: hidden; /* Prevent text overflow */
+            padding: 20px; /* Add padding for better spacing */
+        }
 
-		.projects_area .feature_item img {
-			width: 115px; /* Increase image size by 15% */
-			height: 115px;
-			border-radius: 50%; /* Make images circular */
-			object-fit: cover; /* Ensure images fit well */
-			margin-bottom: 10px; /* Reduce gap between image and title */
-		}
+        .projects_area .feature_item img {
+            width: 120px; /* Increase image size by 15% */
+            height: 120px;
+            border-radius: 50%; /* Make images circular */
+            object-fit: cover; /* Ensure images fit well */
+            margin-bottom: 10px; /* Reduce gap between image and title */
+        }
 
-		.projects_area .feature_item h4 {
-			font-size: 18px;
-			margin-bottom: 5px; /* Reduce gap between title and text */
-			white-space: normal; /* Allow text wrapping */
-			overflow: hidden; /* Hide overflow text */
-			text-overflow: ellipsis; /* Add ellipsis for overflow text */
-		}
+        .projects_area .feature_item h4 {
+            font-size: 18px;
+            margin-bottom: 5px; /* Reduce gap between title and text */
+            white-space: normal; /* Allow text wrapping */
+            overflow: hidden; /* Hide overflow text */
+            text-overflow: ellipsis; /* Add ellipsis for overflow text */
+        }
 
-		.projects_area .feature_item p {
-			font-size: 14px;
-			color: #666;
-			white-space: normal; /* Allow text wrapping */
-			overflow: hidden; /* Hide overflow text */
-			text-overflow: ellipsis; /* Add ellipsis for overflow text */
-		}
+        .projects_area .feature_item p {
+            font-size: 14px;
+            color: #666;
+            white-space: normal; /* Allow text wrapping */
+            overflow: hidden; /* Hide overflow text */
+            text-overflow: ellipsis; /* Add ellipsis for overflow text */
+        }
 
-		/* Reduce gap between sections */
-		.section_gap {
-			padding: 50px 0; /* Adjust padding to reduce gap */
-		}
-	</style>
+        /* Reduce gap between sections */
+        .section_gap {
+            padding: 50px 0; /* Adjust padding to reduce gap */
+        }
+
+        /* About Section: Fix image overflow and reduce gap */
+        .about_area .about_img img {
+            width: 100%; /* Reset to 100% to prevent overflow */
+            height: auto; /* Maintain aspect ratio */
+            max-width: 100%; /* Ensure it doesn't exceed container width */
+            margin-top: 20px; /* Adjust this value to reduce the gap between text and image */
+        }
+
+    /* Personal Projects Section: Match Skills section behavior */
+.personal_projects_area .feature_item {
+    text-align: center;
+    margin-bottom: 30px;
+    width: 100%; /* Ensure all boxes have the same width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center content vertically */
+    height: 350px; /* Match the height of Skills section containers */
+    padding: 20px; /* Match padding of Skills section containers */
+    border: 1px solid #e0e0e0; /* Match border of Skills section containers */
+    border-radius: 10px; /* Match border radius of Skills section containers */
+    transition: all 0.3s ease; /* Add hover transition */
+}
+
+.personal_projects_area .feature_item:hover {
+    transform: translateY(-10px); /* Match hover animation of Skills section */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Match hover shadow of Skills section */
+}
+
+.personal_projects_area .feature_item img {
+    width: 120px; /* Match image size of Skills section */
+    height: 120px; /* Match image size of Skills section */
+    border-radius: 50%; /* Match circular images of Skills section */
+    object-fit: cover; /* Ensure images fit well without distortion */
+    margin-bottom: 10px; /* Match gap between image and title */
+}
+
+.personal_projects_area .feature_item h4 {
+    font-size: 18px;
+    margin-top: 10px; /* Match gap between image and title */
+    margin-bottom: 5px; /* Match gap between title and text */
+}
+
+.personal_projects_area .feature_item p {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px; /* Match gap between title and text */
+}
+    </style>
 </head>
 
 <body>
-	<header class="header_area">
-		<div class="main_menu">
-			<nav class="navbar navbar-expand-lg navbar-light">
-				<div class="container">
-					<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-						<ul class="nav navbar-nav menu_nav justify-content-end">
-							<li class="nav-item active"><a class="nav-link" href="#home">Home</a></li>
-							<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-							<li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-							<li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-							<li class="nav-item"><a class="nav-link" href="articles.html">Articles</a></li>
-							<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-						</ul>
-					</div>
-				</div>
-			</nav>
-		</div>
-	</header>
+    <header class="header_area">
+        <div class="main_menu">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container">
+                    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav menu_nav justify-content-end">
+                            <li class="nav-item active"><a class="nav-link" href="#home">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                            <li class="nav-item"><a class="nav-link" href="articles.html">Articles</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
 
-	<!-- Home Section -->
-	<section class="home_banner_area" id="home">
-		<div class="banner_inner">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-7">
-						<div class="banner_content">
-							<h3 class="text-uppercase">Hello</h3>
-							<h1 class="text-uppercase">I am Vineet Kishore</h1>
-							<h5 class="text-uppercase">Student at VIT University</h5>
-							<h6 class="text-uppercase">Software Engineer, App Developer, and UI/UX Designer</h6>
-							<div class="d-flex align-items-center">
-								<a class="primary_btn" href="#"><span>Hire Me</span></a>
-								<a class="primary_btn tr-bg" href="cv/vin_cv.pdf"><span>Get CV</span></a>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-5">
-						<div class="home_right_img">
-							<img src="img/banner/home-right.png" alt="">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+    <!-- Home Section -->
+    <section class="home_banner_area" id="home">
+        <div class="banner_inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="banner_content">
+                            <h3 class="text-uppercase">Hello</h3>
+                            <h1 class="text-uppercase">I am Vineet Kishore</h1>
+                            <h5 class="text-uppercase">Student at VIT University</h5>
+                            <h6 class="text-uppercase">Software Engineer, App Developer, and UI/UX Designer</h6>
+                            <div class="d-flex align-items-center">
+                                <a class="primary_btn" href="#"><span>Hire Me</span></a>
+                                <a class="primary_btn tr-bg" href="cv/vin_cv.pdf"><span>Get CV</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="home_right_img">
+                            <img src="img/banner/home-right.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<!-- About Section -->
-	<section class="about_area section_gap" id="about">
-		<div class="container">
-			<div class="row justify-content-start align-items-center">
-				<div class="col-lg-5">
-					<div class="about_img">
-						<img src="img/about-us.png" alt="">
-					</div>
-				</div>
-				<div class="offset-lg-1 col-lg-5">
-					<div class="main_title text-left">
-						<h2>Let me introduce about myself</h2>
-						<p>I want to live for a cause and not applause. I thrive to innovate by research to make this world a better place. Patience and rational thinking are my biggest strengths.</p>
-						<a class="primary_btn" href="cv/vin_cv.pdf"><span>Download CV</span></a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+    <!-- About Section -->
+    <section class="about_area section_gap" id="about">
+        <div class="container">
+            <div class="row justify-content-start align-items-center">
+                <div class="col-lg-5">
+                    <div class="about_img">
+                        <img src="img/about-us.png" alt="">
+                    </div>
+                </div>
+                <div class="offset-lg-1 col-lg-5">
+                    <div class="main_title text-left">
+                        <h2>Let me introduce about myself</h2>
+                        <p>I want to live for a cause and not applause. I thrive to innovate by research to make this world a better place. Patience and rational thinking are my biggest strengths.</p>
+                        <a class="primary_btn" href="cv/vin_cv.pdf"><span>Download CV</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<!-- Skills Section -->
-	<section class="features_area" id="skills">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-lg-8 text-center">
-					<div class="main_title">
-						<h2>Professional Skills</h2>
-						<p>Some of the skills that I have refined over the course of my undergrad degree.</p>
-					</div>
-				</div>
-			</div>
-			<div class="row feature_inner">
-				<div class="col-lg-3 col-md-6">
-					<div class="feature_item">
-						<img src="img/services/s1.png" alt="">
-						<h4>App Development</h4>
-						<p>I have built intuitive and beautiful cross-platform apps with Flutter.</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="feature_item">
-						<img src="img/services/s2.png" alt="">
-						<h4>UI/UX Design</h4>
-						<p>Designed, prototyped, and wireframed apps and websites using Adobe XD.</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="feature_item">
-						<img src="img/services/s3.png" alt="">
-						<h4>Machine Learning</h4>
-						<p>Worked on projects using tools like SciKit, TensorFlow, and PyTorch.</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="feature_item">
-						<img src="img/services/s4.png" alt="">
-						<h4>Competitive Programming</h4>
-						<p>Proficient in C, C++, Java, Python, and Dart.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+    <!-- Skills Section -->
+    <section class="features_area" id="skills">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <div class="main_title">
+                        <h2>Professional Skills</h2>
+                        <p>Some of the skills that I have refined over the course of my undergrad degree.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row feature_inner">
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature_item">
+                        <img src="img/services/s1.png" alt="">
+                        <h4>App Development</h4>
+                        <p>I have built intuitive and beautiful cross-platform apps with Flutter.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature_item">
+                        <img src="img/services/s2.png" alt="">
+                        <h4>UI/UX Design</h4>
+                        <p>Designed, prototyped, and wireframed apps and websites using Adobe XD.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature_item">
+                        <img src="img/services/s3.png" alt="">
+                        <h4>Machine Learning</h4>
+                        <p>Worked on projects using tools like SciKit, TensorFlow, and PyTorch.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature_item">
+                        <img src="img/services/s4.png" alt="">
+                        <h4>Competitive Programming</h4>
+                        <p>Proficient in C, C++, Java, Python, and Dart.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<!-- Projects Section -->
-	<section class="projects_area" id="projects">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-lg-8 text-center">
-					<div class="main_title">
-						<h2>Projects</h2>
-						<p>Here are some of the projects I have worked on.</p>
-					</div>
-				</div>
-			</div>
-			<div class="row feature_inner">
-				<div class="col-lg-3 col-md-6">
-					<div class="feature_item">
-						<img src="img/projects/p1.png" alt="" class="project_image">
-						<h4>Wolfcry Newsapp</h4>
-						<p>News app with 130+ channels for users to subscribe based on preferences.</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="feature_item">
-						<img src="img/projects/talking_pigeon.png" alt="" class="project_image">
-						<h4>Talking Pigeon</h4>
-						<p>Direct messaging app with a simplistic UI for Android and iOS.</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="feature_item">
-						<img src="img/projects/applebasket.png" alt="" class="project_image">
-						<h4>Farmer's Mandi</h4>
-						<p>App for farmers and brokers to interact, check prices, and stay updated.</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="feature_item">
-						<img src="img/projects/p4.png" alt="" class="project_image">
-						<h4>Custom ROM</h4>
-						<p>Custom Android ROM development and optimization.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+<!-- Personal Projects Section -->
+<section class="personal_projects_area section_gap" id="personal-projects">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <div class="main_title">
+                    <h2>Personal Projects</h2>
+                    <p>Projects that I have built during my graduates.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row feature_inner">
+            <div class="col-lg-3 col-md-6">
+                <div class="feature_item">
+                    <img src="img/projects/talking_pigeon.png" alt="Talking Pigeon">
+                    <h4>Talking Pigeon</h4>
+                    <p>Direct messaging app with a simplistic UX for Android and iOS.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="feature_item">
+                    <img src="img/projects/applebasket.png" alt="Farmer's Mandi">
+                    <h4>Farmer's Mandi</h4>
+                    <p>An app for the farmers and brokers to interact, match prices, and stay updated about the niche.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="feature_item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Android_Studio_Icon_3.6.svg/1900px-Android_Studio_Icon_3.6.svg.png" alt="Custom ROMs">
+                    <h4>Custom ROMs</h4>
+                    <p>Worked and tested several custom ROM projects (Matrixx OS, Pixel OS, Lineage OS) for OnePlus Nord.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="feature_item">
+                    <img src="https://github.com/SkullEnemyX/Wolfcry-NewsApp/blob/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png?raw=true" alt="Wolfcry News">
+                    <h4>Wolfcry News</h4>
+                    <p>A news aggregator for 130+ channels covering the latest articles globally as per the user's preference.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-	<!-- Contact Section -->
-	<section class="contact_area section_gap" id="contact">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-3">
-					<div class="contact_info">
-						<div class="info_item">
-							<i class="lnr lnr-home"></i>
-							<h6>Chennai, India</h6>
-							<p>VIT University</p>
-						</div>
-						<div class="info_item">
-							<i class="lnr lnr-phone-handset"></i>
-							<h6><a href="#">+91-755-017-2355</a></h6>
-							<p>Mon to Fri 9am to 6pm</p>
-						</div>
-						<div class="info_item">
-							<i class="lnr lnr-envelope"></i>
-							<h6><a href="#">vineetkishore01@gmail.com</a></h6>
-							<p>Mail me anytime!</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-9">
-					<form class="row contact_form" action="mailto:vineetkishore01@gmail.com" method="post" enctype="text/plain">
-						<div class="col-md-6">
-							<div class="form-group">
-								<input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
-							</div>
-							<div class="form-group">
-								<input type="email" class="form-control" id="email" name="email" placeholder="Enter email address">
-							</div>
-							<div class="form-group">
-								<input type="text" class="form-control" id="subject" name="subject" placeholder="Enter Subject">
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="form-group">
-								<textarea class="form-control" name="message" id="message" rows="1" placeholder="Enter Message"></textarea>
-							</div>
-						</div>
-						<div class="col-md-12 text-right">
-							<button type="submit" class="primary_btn">
-								<span>Send Message</span>
-							</button>
-						</div>
-					</form>
-				</div>
-			</div>
-			<br>
-			<center>
-				<div class="container">
-					<div class="row justify-content-center">
-						<div class="col-lg-8 text-center">
-							<h3>Visit me on my social profiles</h3>
-						</div>
-					</div>
-					<div class="button-group-area mt-40">
-						<a href="https://www.linkedin.com/in/vineet-kishore-a73149179/" target="_blank" class="genric-btn primary circle">LinkedIn</a>
-						<a href="https://twitter.com/VineetKishore7" target="_blank" class="genric-btn success circle">Twitter</a>
-						<a href="https://www.facebook.com/vineet.kishore.127" target="_blank" class="genric-btn info circle">Facebook</a>
-					</div>
-				</div>
-			</center>
-		</div>
-	</section>
+    <!-- Contact Section -->
+    <section class="contact_area section_gap" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="contact_info">
+                        <div class="info_item">
+                            <i class="lnr lnr-home"></i>
+                            <h6>Chennai, India</h6>
+                            <p>VIT University</p>
+                        </div>
+                        <div class="info_item">
+                            <i class="lnr lnr-phone-handset"></i>
+                            <h6><a href="#">+91-755-017-2355</a></h6>
+                            <p>Mon to Fri 9am to 6pm</p>
+                        </div>
+                        <div class="info_item">
+                            <i class="lnr lnr-envelope"></i>
+                            <h6><a href="#">vineetkishore01@gmail.com</a></h6>
+                            <p>Mail me anytime!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <form class="row contact_form" action="mailto:vineetkishore01@gmail.com" method="post" enctype="text/plain">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Enter email address">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter Subject">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <textarea class="form-control" name="message" id="message" rows="1" placeholder="Enter Message"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-12 text-right">
+                            <button type="submit" class="primary_btn">
+                                <span>Send Message</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <br>
+            <center>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8 text-center">
+                            <h3>Visit me on my social profiles</h3>
+                        </div>
+                    </div>
+                    <div class="button-group-area mt-40">
+                        <a href="https://www.linkedin.com/in/vineet-kishore-a73149179/" target="_blank" class="genric-btn primary circle">LinkedIn</a>
+                        <a href="https://twitter.com/VineetKishore7" target="_blank" class="genric-btn success circle">Twitter</a>
+                        <a href="https://www.facebook.com/vineet.kishore.127" target="_blank" class="genric-btn info circle">Facebook</a>
+                    </div>
+                </div>
+            </center>
+        </div>
+    </section>
 
-	<script src="js/jquery-3.2.1.min.js"></script>
-	<script src="js/popper.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/stellar.js"></script>
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
-	<script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
-	<script src="vendors/isotope/isotope-min.js"></script>
-	<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-	<script src="js/jquery.ajaxchimp.min.js"></script>
-	<script src="js/mail-script.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
-	<script src="js/gmaps.min.js"></script>
-	<script src="js/theme.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/stellar.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
+    <script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
+    <script src="vendors/isotope/isotope-min.js"></script>
+    <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/mail-script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+    <script src="js/gmaps.min.js"></script>
+    <script src="js/theme.js"></script>
 </body>
 </html>
